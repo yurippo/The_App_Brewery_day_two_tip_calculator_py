@@ -6,6 +6,8 @@ def main():
     #print(f'Bill $'+ total_bill)
     tip_percentage = input("How much tip would you like to give? 10, 12 or 15%? ")
     tip_percentage_float = float(tip_percentage)
+    number_of_people_to_split = input("How many people to split the bill?")
+    number_of_people_to_split_float = float(number_of_people_to_split)
     #print(f'Tip '+ tip_percentage +'%')
 
     #P% of N
@@ -22,9 +24,13 @@ def main():
     total_bill_plus_tip = (total_bill_float + total_tip_round )
     total_bill_plus_tip_to_string = str(total_bill_plus_tip)
 
-    print(f'Total $'+ total_bill_plus_tip_to_string)
+    each_person_pays = total_bill_plus_tip / number_of_people_to_split_float
 
-    
+    each_person_pays_round = round(each_person_pays)
+    each_person_pays_round_string = str(each_person_pays_round)
+
+    print(f'Total $'+ total_bill_plus_tip_to_string)
+    print(f'Each person pays $'+ each_person_pays_round_string)    
 
     
 if __name__=="__main__":
