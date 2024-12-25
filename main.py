@@ -30,7 +30,7 @@ def main():
     each_person_pays_round_string = str(each_person_pays_round)
 
     print(f'Total $'+ total_bill_plus_tip_to_string)
-    print(f'Each person pays $'+ each_person_pays_round_string)    
+    print(f'Each person should pay $'+ each_person_pays_round_string +" dollars")    
 
     
 if __name__=="__main__":
